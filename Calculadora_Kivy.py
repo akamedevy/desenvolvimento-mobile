@@ -35,7 +35,7 @@ class MyCalc(App):
         self.botao14 = Button(text="8")
         self.botao15 = Button(text="9")
         self.botao16 = Button(text="*")
-        self.botao17 = Button(text=".")
+        self.botao17 = Button(text="**")
         self.botao18 = Button(text="0")
         self.botao19 = Button(text="√")
         self.botao20 = Button(text="=")
@@ -101,7 +101,6 @@ class MyCalc(App):
     def calcular(self, event):
 
         if "√" in self.display.text:
-            # Remove o símbolo "√" e calcula a raiz quadrada do número restante
             numero = float(self.display.text.replace("√", ""))
             resultado = math.sqrt(numero)
             self.display.text = str(resultado)
